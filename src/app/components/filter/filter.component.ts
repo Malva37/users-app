@@ -9,6 +9,8 @@ export class FilterComponent {
   // @Output() filterUsers = new EventEmitter($event);
   @Input()
   cities!: string[];
+  @Input()
+  streets!: string[];
 
   showParam(event:Event) {
     const param = (event.target as HTMLInputElement).name;
