@@ -1,0 +1,22 @@
+.formParams {
+  column-count: 5;
+
+  @media (max-width: 750px) {
+    column-count: 4;
+  }
+}
+.labelParam {
+  max-width: 18ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: 750px) {
+    max-width: 15ch;
+  }
+
+  @media (max-width: 340px) {
+    max-width: 10ch;
+  }
+}
+

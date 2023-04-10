@@ -4,24 +4,33 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+Users-App
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Users-App is a client for the https://randomuser.me/api/?seed=foobar. Seed was used in API to received identical every time.
+Collection organized in the amount of 100 users and you could see them in
+a table of 25 per "page"(DevExpress).
+With a click of the arrow near picture, you can see extra information(City, Street, Email).
 
-## Running unit tests
+Filter component placed above the table component.
+Contains a set of Bootstrap checkboxes responsible for the following parameters:
+● Sex
+● City
+● Street
+● Email
+● Phone
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Selected parameters saved in localStorage. This component filter the data in the table, as well as modify the transferred data
+parameters.
+If you want receive new data from the backend you can click to button get new users
 
-## Running end-to-end tests
+Demo
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Technologies Used
+This project uses Angular, TypeScript, HTML, SCSS, bootstrap, DevExpress, API
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
