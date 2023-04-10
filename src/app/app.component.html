@@ -1,72 +1,10 @@
-<header>
-  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#index">Index</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#about">About</a>
-    </li>
-  </ul>
-</header>
-<section>
-  <app-filter
-    [cities]="cities"
-    [streets] = "streets"
-    ></app-filter>
-</section>
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" aria-current="page" routerLink="/index">Index</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/about">About</a>
+  </li>
+</ul>
 
-  <dx-data-grid
-    [dataSource]="users"
-    [rowAlternationEnabled]="true"
-    [showBorders]="true"
-  >
-    <dxo-paging [pageSize] = "25"></dxo-paging>
-    <dxo-pager [showInfo]="true"></dxo-pager>
-
-    <dxo-search-panel
-      [visible]="true"
-      [width]="240"
-      placeholder="Search...">
-    </dxo-search-panel>
-    <dxo-sorting mode="multiple"></dxo-sorting>
-
-    <dxi-column
-    dataField="picture"
-    [width]="100"
-    [allowFiltering]="false"
-    [allowSorting]="false"
-    cellTemplate="cellTemplate"
-  ></dxi-column>
-
-  <div *dxTemplate="let data of 'cellTemplate'">
-    <img [src]="data.value" />
-  </div>
-
-    <dxi-column dataField="gender"></dxi-column>
-    <dxi-column dataField="name"></dxi-column>
-    <dxi-column dataField="phone"></dxi-column>
-
-    <!-- <dxo-master-detail [enabled]="true" template="detail"></dxo-master-detail>
-    <div *dxTemplate="let user of 'detail'">
-      <div class="master-detail-caption">Extra user's data</div>
-      <detail-grid [key]="user"></detail-grid>
-    </div> -->
-
-    <dxo-master-detail [enabled]="true" template="detail"></dxo-master-detail>
-    <div *dxTemplate="let user of 'detail'">
-
-      <p>{{ "City: " + user.data.city }}</p>
-      <p>{{ "Street: " + user.data.street }}</p>
-      <p>{{ "Email: " + user.data.email }}</p>
-      <!-- <dx-data-grid>
-         <p>{{user.data.city}}</p>
-        <dxi-column dataField="city">{{user.city}}</dxi-column>
-        <dxi-column dataField="street">{{user.street}}</dxi-column>
-        <dxi-column dataField="email">{{user.email}}</dxi-column>
-      </dx-data-grid> -->
-  </div>
-
-
-</dx-data-grid>
-
-<!-- <router-outlet></router-outlet> -->
+<router-outlet></router-outlet>

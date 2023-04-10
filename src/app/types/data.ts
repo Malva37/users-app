@@ -1,21 +1,21 @@
-export interface Data {
+export interface UserFromServer {
   email: string;
   gender: string;
   location: {
-    city: string,
-    street:{
-      name: string,
-      number: number,
-    }
+    city: string;
+    street: {
+      name: string;
+      number: number;
+    };
   };
   name: {
-    first: string,
-    last: string,
+    first: string;
+    last: string;
   };
   phone: string;
   picture: {
-    large: string,
-    medium: string,
-    thumbnail: string,
-  }
+    large: string;
+    medium: string;
+    thumbnail: string;
+  };
 }
