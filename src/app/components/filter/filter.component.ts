@@ -84,9 +84,6 @@ export class FilterComponent implements OnInit {
       }
     })
   }
-  // updatePhones(event: Event) {
-    // const param: { [key: string]: FieldFilter } = (event.target as HTMLInputElement).name;
-    // console.log(param);
   updatePhones() {
     this.phonesFromStorage = JSON.parse(localStorage.getItem('phone') || '[]');
     this.phones = this.phones.map((phone) => {

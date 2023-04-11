@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { UsersServerResponse } from '../types/dataFromServer';
 
 const API_URL = 'https://randomuser.me/api';
+const SEED = 'foobar';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +13,7 @@ export class UsersService {
 
   getUsers() {
     return this.http.get<UsersServerResponse>(
-      `${API_URL}/?seed=foobar&results=100`
+      `${API_URL}/?seed=${SEED}&results=100`
     );
   }
 

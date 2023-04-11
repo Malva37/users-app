@@ -1,4 +1,7 @@
 export interface UserFromServer {
+  login: {
+    uuid: string;
+  }
   email: string;
   gender: string;
   location: {

@@ -10,14 +10,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FilterComponent } from './components/filter/filter.component';
-import { DetailGridComponent } from './components/detail-grid/detail-grid.component';
 import { AboutComponent } from './components/about/about.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilterComponent,
-    DetailGridComponent,
     AboutComponent,
     UsersComponent
   ],
@@ -32,6 +31,7 @@ import { AboutComponent } from './components/about/about.component';
     DxTemplateModule,
     CollapseModule.forRoot(),
     BrowserAnimationsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

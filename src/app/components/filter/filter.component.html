@@ -1,36 +1,36 @@
 <div style="display: flex; padding: 1rem;" class="form-check form-check-inline justify-content-between">
   <div style="display: flex;" class="justify-content-between">
-    <div class="checkbox col">
-      <label><input type="checkbox" name="gender" [(ngModel)]="isGenderOpen" (change)="updateGender()">Show
-        gender</label>
+    <div class="checkbox col-5">
+      <label><input type="checkbox" name="gender" [(ngModel)]="isGenderOpen" (change)="updateGender()">Gender</label>
     </div>
 
-    <div class="checkbox col">
-      <label><input type="checkbox" name="city" [(ngModel)]="isCitiesOpen" (change)="updateCities()">Show all cities</label>
+    <div class="checkbox col-5">
+      <label><input type="checkbox" name="city" [(ngModel)]="isCitiesOpen" (change)="updateCities()">City</label>
     </div>
 
-    <div class="checkbox col">
-      <label><input type="checkbox" name="street" [(ngModel)]="isStreetsOpen" (change)="updateStreets()">Show all streets</label>
+    <div class="checkbox col-5">
+      <label><input type="checkbox" name="street" [(ngModel)]="isStreetsOpen" (change)="updateStreets()">Street</label>
     </div>
 
-    <div class="checkbox col">
-      <label><input type="checkbox" name="email" [(ngModel)]="isEmailsOpen" (change)="updateEmails()">Show all emails</label>
+    <div class="checkbox col-5">
+      <label><input type="checkbox" name="email" [(ngModel)]="isEmailsOpen" (change)="updateEmails()">Email</label>
     </div>
 
-    <div class="checkbox col">
-      <label><input type="checkbox" name="phone" [(ngModel)]="isPhonesOpen" (change)="updatePhones()">Show all phones</label>
+    <div class="checkbox col-5">
+      <label><input type="checkbox" name="phone" [(ngModel)]="isPhonesOpen" (change)="updatePhones()">Phone</label>
     </div>
   </div>
 
   <div class="btn-group" role="group" >
-    <button type="button" class="btn btn-outline-dark btn-sm" (click)="resetAllFilters()">Reset all filters</button>
+    <button type="button" class="btn btn-secondary" (click)="resetAllFilters()">Reset all filters</button>
   </div>
+
 </div>
 
-<form [collapse]="!isGenderOpen" class="border p-3" [isAnimated]="true">
-  <!-- <button (click)="uploadNewData()">get new users</button> -->
-  <h6>Filter by gender</h6>
-  <div *ngFor="let gender of genders; let i = index;">
+
+<form [collapse]="!isGenderOpen"  class="border p-3 formParams m-3" [isAnimated]="true">
+  <h6 class="card-subtitle mb-2 text-muted">Filter by gender</h6>
+  <div class="card-body" *ngFor="let gender of genders; let i = index;">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" name="gender" id="{{ gender.name }}" value="{{ gender.name }}"
         (click)="handleClick($event)" [checked]="gender.isChecked">
@@ -39,11 +39,12 @@
       </label>
     </div>
   </div>
+  <button class="btn btn-secondary btn-sm" (click)="uploadNewData()">get new users</button>
 </form >
 
 
-<form [collapse]="!isCitiesOpen" class="border p-3 formParams" [isAnimated]="true">
-  <h6>Filter by city</h6>
+<form [collapse]="!isCitiesOpen" class="border p-3 formParams m-3" [isAnimated]="true">
+  <h6 class="card-subtitle mb-2 text-muted">Filter by city</h6>
   <div *ngFor="let city of cities; let i = index">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" name="city" id="{{ city.name }}" value="{{ city.name }}"
@@ -55,8 +56,8 @@
   </div>
 </form>
 
-<form [collapse]="!isStreetsOpen" class="border p-3 formParams" [isAnimated]="true">
-  <h6>Filter by street</h6>
+<form [collapse]="!isStreetsOpen" class="border p-3 formParams m-3" [isAnimated]="true">
+  <h6 class="card-subtitle mb-2 text-muted">Filter by street</h6>
   <div *ngFor="let street of streets; let i = index">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" name="street" id="{{ street.name }}" value="{{ street.name }}"
@@ -68,8 +69,8 @@
   </div>
 </form>
 
-<form [collapse]="!isEmailsOpen" class="border p-3 formParams" [isAnimated]="true">
-  <h6>Filter by email</h6>
+<form [collapse]="!isEmailsOpen" class="border p-3 formParams m-3" [isAnimated]="true">
+  <h6 class="card-subtitle mb-2 text-muted">Filter by email</h6>
   <div *ngFor="let email of emails; let i = index">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" name="email" id="{{ email.name }}" value="{{ email.name }}"
@@ -81,8 +82,8 @@
   </div>
 </form>
 
-<form [collapse]="!isPhonesOpen" class="border p-3 formParams" [isAnimated]="true">
-  <h6>Filter by phone</h6>
+<form [collapse]="!isPhonesOpen" class="border p-3 formParams m-3" [isAnimated]="true">
+  <h6 class="card-subtitle mb-2 text-muted">Filter by phone</h6>
   <div *ngFor="let phone of phones; let i = index">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" name="phone" id="{{ phone.name }}" value="{{ phone.name }}"

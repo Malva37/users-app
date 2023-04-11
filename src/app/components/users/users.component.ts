@@ -54,7 +54,12 @@ export class UsersComponent {
 
   normalizeData = (data: UserFromServer[]): User[] => {
     return data.map((user) => {
+
+      // console.log(user.id.value);
+      // console.log(user.id);
+
       const preparedUser: User = {
+        id: user.login.uuid,
         name: user.name.first + ' ' + user.name.last,
         gender: user.gender,
         phone: user.phone,
