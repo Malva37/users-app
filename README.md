@@ -1,36 +1,28 @@
-# AngularUsersApp
+#Users-App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+- [DEMO LINK](https://malva37.github.io/users-app/)
 
-## Development server
+The application consists of two pages with the ability to route between them. The first page is called "Index," and the second is called "About." The first page contains two components: a list of users and a filter, while the second page contains arbitrary information.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+"Users-App" is a client for the https://randomuser.me/api/?seed=foobar API. The "seed" parameter was used in the API to receive identical data every time. The collection is organized into 100 users, and you can view them in a table of 25 users per page (using DevExpress). By clicking on the arrow next to a user's picture, you can view additional information such as their city, street, and email.
 
+The filter component is placed above the table component and contains a set of Bootstrap checkboxes for the following parameters:
+1.Sex
+2.City
+3.Street
+4.Email
+5.Phone
 
+Selected parameters are saved in localStorage. This component filters the data in the table and modifies the transferred data parameters. If you want to receive new data (without the seed parameter) from the backend, you can click the "get new users" button.
 
-Users-App
-
-Users-App is a client for the https://randomuser.me/api/?seed=foobar. Seed was used in API to received identical every time.
-Collection organized in the amount of 100 users and you could see them in
-a table of 25 per "page"(DevExpress).
-With a click of the arrow near picture, you can see extra information(City, Street, Email).
-
-Filter component placed above the table component.
-Contains a set of Bootstrap checkboxes responsible for the following parameters:
-● Sex
-● City
-● Street
-● Email
-● Phone
-
-Selected parameters saved in localStorage. This component filter the data in the table, as well as modify the transferred data
-parameters.
-If you want receive new data from the backend you can click to button get new users
-
-Demo
-
-Technologies Used
-This project uses Angular, TypeScript, HTML, SCSS, bootstrap, DevExpress, API
+##Technologies Used
+-Angular
+-TypeScript
+-HTML
+-SCSS
+-Bootstrap
+-DevExpress
+-API
 
 
 
